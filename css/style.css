@@ -1,0 +1,440 @@
+@import "reset.css";
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/opensans.ttf);
+    src: url(../fonts/opensans.woff);
+}
+
+@font-face {
+    font-family: "Nexa Bold";
+    src: url(../fonts/nexabold.ttf);
+    src: url(../fonts/nexabold.woff);
+}
+
+body {
+    background-color: #c2c2c2;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* header */
+/* ---------------------------------------------------------------------------------- */
+.header {
+    width: 1211px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_card {
+    display: flex;
+}
+
+.card_icon {
+    width: 50px;
+    height: 50px;
+    background-color: #1a9bdc;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.card_content {
+    align-self: center;
+    margin-left: 19px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.card_content p:first-child {
+    font-weight: 700;
+}
+
+hr {
+    height: 2px;
+    background-color: #c2c2c2;
+    opacity: 0.31;
+    margin: 20px 10px;
+}
+
+.header_bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_menu ul {
+    display: flex;
+    justify-content: space-between;
+    width: 546px;
+    color: #6c6c6c;
+    font-family: "Nexa Bold";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #1a9bdc;
+}
+
+.active {
+    color: #262626;
+}
+
+.header_socials {
+    color: #191919;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+/* banner */
+/* -------------------------------------------------------------------------------- */
+
+.banner {
+    background-image: url(../img/layer_10_2248.jpg);
+    height: 640px;
+}
+
+/* Services */
+/* --------------------------------------------------------------------------------- */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
+.services_card {
+    height: 360px;
+    padding-top: 75px;
+}
+
+.services_card_image {
+    width: 75px;
+    height: 75px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 12px;
+    margin: 0 auto;
+}
+
+.services_card h3 {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1.82px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.services_card p {
+    width: 290px;
+    color: #ffffff;
+    font-family: "OpenSans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services_card:nth-of-type(1) {
+    background-color: #43b1d2;
+}
+
+.services_card:nth-of-type(2) {
+    background-color: #3fb6c6;
+}
+
+.services_card:nth-of-type(3) {
+    background-color: #3cbbbb;
+}
+
+.services_card:nth-of-type(4) {
+    background-color: #37c3a8;
+}
+
+/* whychoseus */
+/* ------------------------------------------------------------------------- */
+
+.whychoseus {
+    min-height: 856px;
+    background-image: url(../img/Layer_2.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-top: 110px;
+}
+
+@media (max-width: 1000px) {
+    .whychoseus {
+        grid-template-columns: 1fr;
+        background-position: right bottom;
+    }
+
+    .whychoseus>header {
+        margin-bottom: 30px;
+    }
+
+    .whychoseus_card {
+        margin-bottom: 50px;
+    }
+}
+
+.whychoseus>header {
+    grid-column: 1/-1;
+}
+
+.whychoseus>header>h2 {
+    color: #494949;
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.whychoseus>header>p {
+    max-width: 878px;
+    color: #6a6a6a;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.whychoseus_card_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 360px;
+    margin: 0 auto;
+}
+
+.whychoseus_card_image {
+    width: 75px;
+    height: 75px;
+    background-color: #1a9bdc;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 12px;
+    margin-right: 20px;
+}
+
+.whychoseus_card_header h3 {
+    width: 177px;
+    height: 25px;
+    color: #6f6f6e;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1.82px;
+}
+
+.whychoseus_card p {
+    width: 363px;
+    height: 74px;
+    color: #6a6a6a;
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0 auto;
+}
+
+/* bestfeature */
+/* ---------------------------------------------------------------------- */
+
+.bestfeature {
+    min-height: 592px;
+    background-color: #0087be;
+    background-image: url(../img/Layer_9.png);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding: 0 calc(10%);
+}
+
+@media (max-width: 1000px) {
+    .bestfeature {
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 30px;
+    }
+
+    .bestfeature_card {
+        margin-top: 70px;
+    }
+}
+
+.bestfeature_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: Montserrat;
+}
+
+.bestfeature_card h3 {
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: -1.19px;
+    margin-top: 47px;
+}
+
+.bestfeature_card div {
+    width: 85px;
+    height: 6px;
+    background-color: #ffffff;
+    margin-top: 26px;
+}
+
+.bestfeature_card p {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: -1.52px;
+    text-align: center;
+    margin-top: 27px;
+}
+
+/* textarea */
+/* -------------------------------------------------------------------- */
+
+.textarea {
+    display: grid;
+    grid-template-columns: 1fr 1fr 400px;
+    grid-template-rows: 1fr 2fr auto;
+    padding: 100px calc(12%);
+    grid-gap: 50px;
+}
+
+.shorttext h3 {
+    color: #494949;
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 33px;
+}
+
+.shorttext:nth-of-type(1) {
+    grid-column: 1/3;
+}
+
+.shorttext p {
+    color: #6a6a6a;
+    font-family: "OpenSans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.textarea_card h4 {
+    color: #6f6f6e;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -1.21px;
+    margin-top: 35px;
+}
+
+.textarea_card div {
+    color: #0087be;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.38px;
+    margin-top: 13px;
+}
+
+.textarea_card p {
+    color: #6a6a6a;
+    font-family: "OpenSans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 27px;
+}
+
+.accord_btn {
+    width: 422px;
+    height: 54px;
+    background-color: #e2e2e2;
+    border-radius: 27px;
+    padding-left: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    color: #494949;
+}
+
+.accord_btn>div {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    color: #0087be;
+}
+
+.accord_btn p {
+    padding-left: 20px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.accord_btn:nth-of-type(1) {
+    background-color: #0087be;
+    color: #fff;
+}
+
+.accord_btn:hover {
+    background-color: #1a9bdc;
+}
+
+.accord_content {
+    color: #6a6a6a;
+    font-family: "OpenSans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-bottom: 40px;
+}
