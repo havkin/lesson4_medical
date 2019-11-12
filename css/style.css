@@ -12,31 +12,29 @@
     src: url(../fonts/nexabold.woff);
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,500,700&display=swap');
+
 body {
-    background-color: #c2c2c2;
+    background-color: #fff;
 }
 
 .container {
-    /* background-color: #fff; */
-    max-width: 1600px;
-    margin: 0 auto;
+    font-family: Montserrat, sans-serif;
 }
 
 /* header */
 /* ---------------------------------------------------------------------------------- */
 .header {
-    /* width: 1211px; */
-    /* margin: 0 auto; */
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .header_top {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1211px; 
+    max-width: 1211px;
     margin: 0 auto;
 }
 
@@ -45,12 +43,15 @@ body {
         flex-direction: column;
         padding-left: 30px;
     }
+
     .header_top>img {
         align-self: flex-start;
     }
+
     .header_card {
         margin-top: 20px;
     }
+
     .header_bottom {
         padding-left: 30px;
     }
@@ -87,7 +88,7 @@ hr {
     height: 2px;
     background-color: #c2c2c2;
     opacity: 0.31;
-    max-width: 1190px; 
+    max-width: 1190px;
     margin: 30px auto;
 }
 
@@ -95,7 +96,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1211px; 
+    max-width: 1211px;
     margin: 0 auto;
 }
 
@@ -114,6 +115,7 @@ hr {
     .header_menu ul {
         flex-direction: column;
     }
+
     .header_menu li {
         margin-bottom: 15px;
     }
@@ -143,20 +145,24 @@ a:hover {
 /* banner */
 /* -------------------------------------------------------------------------------- */
 
-.banner {
-    background: none;
+.banner_container {
+    background-color: #cbd4e6;
+}
+.banner {    
     position: relative;
     /* background-image: url(../img/layer_10_2248.jpg); */
     height: 640px;
     padding-top: 180px;
-    padding-left: calc((100% - 800px) * 250 / 800);
+    /* padding-left: calc((100% - 800px) * 250 / 800); */
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .banner_background {
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: -1;
+    z-index: 1;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -164,14 +170,16 @@ a:hover {
 }
 
 .banner_content {
+    position: relative;
     max-width: 524px;
+    z-index: 10;
+    margin-left: calc((100% - 800px) * 250 / 800);;
     /* padding-left: calc((100% - 800px) * 250 / 800); */
 }
 
 .banner h1 {
     /* height: 104px; */
     color: #474747;
-    font-family: Montserrat;
     font-size: 48px;
     font-weight: 500;
     letter-spacing: -2px;
@@ -193,11 +201,10 @@ a:hover {
 .banner_btn {
     width: 166px;
     height: 47px;
-   
     background-color: #1a9bdc;
     border-radius: 23px;
     color: #ffffff;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato, sans-serif;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
@@ -216,6 +223,7 @@ a:hover {
     position: absolute;
     top: 540px;
     left: calc(50% + 10px);
+    z-index: 10;
 }
 
 /* Services */
@@ -223,7 +231,10 @@ a:hover {
 
 .services {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(auto, 400px));
+    justify-content: center;
+    background: #43b1d2;
+    background: linear-gradient(to right, #43b1d2 0%, #43b1d2 40%, #37c3a7 60%, #37c3a7 100%);
 }
 
 @media (max-width: 1200px) {
@@ -241,6 +252,7 @@ a:hover {
 .services_card {
     height: 360px;
     padding-top: 75px;
+    /* max-width: 400px; */
 }
 
 .services_card_image {
@@ -305,6 +317,8 @@ a:hover {
     grid-template-rows: 1fr 1fr 1fr;
     padding-top: 110px;
     background-color: #fff;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 @media (max-width: 1000px) {
@@ -328,7 +342,6 @@ a:hover {
 
 .whychoseus>header>h2 {
     color: #494949;
-    font-family: Montserrat;
     font-size: 45px;
     font-weight: 700;
     text-align: center;
@@ -338,7 +351,7 @@ a:hover {
 .whychoseus>header>p {
     max-width: 878px;
     color: #6a6a6a;
-    font-family: OpenSans;
+    font-family: OpenSans, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -368,7 +381,6 @@ a:hover {
     width: 177px;
     height: 25px;
     color: #6f6f6e;
-    font-family: Montserrat;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: -1.82px;
@@ -378,7 +390,7 @@ a:hover {
     width: 363px;
     height: 74px;
     color: #6a6a6a;
-    font-family: OpenSans;
+    font-family: OpenSans, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -392,10 +404,11 @@ a:hover {
     min-height: 592px;
     background-color: #0087be;
     background-image: url(../img/Layer_9.png);
+    background-size: cover; 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(auto, 325px));
+    justify-content: center;
     align-items: center;
-    padding: 0 calc(10%);
 }
 
 @media (max-width: 1000px) {
@@ -414,7 +427,6 @@ a:hover {
     flex-direction: column;
     align-items: center;
     color: #fff;
-    font-family: Montserrat;
 }
 
 .bestfeature_card h3 {
@@ -449,6 +461,8 @@ a:hover {
     padding: 100px calc(12%);
     grid-gap: 40px;
     background-color: #fff;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .shorttext:nth-of-type(1) {
@@ -481,7 +495,6 @@ a:hover {
 
 .shorttext h3 {
     color: #494949;
-    font-family: Montserrat;
     font-size: 45px;
     font-weight: 700;
     margin-bottom: 33px;
@@ -489,7 +502,7 @@ a:hover {
 
 .shorttext p {
     color: #6a6a6a;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -497,7 +510,6 @@ a:hover {
 
 .textarea_card h4 {
     color: #6f6f6e;
-    font-family: Montserrat;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: -1.21px;
@@ -506,7 +518,6 @@ a:hover {
 
 .textarea_card div {
     color: #0087be;
-    font-family: Montserrat;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: -0.38px;
@@ -515,7 +526,7 @@ a:hover {
 
 .textarea_card p {
     color: #6a6a6a;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -547,7 +558,6 @@ a:hover {
 
 .accord_btn p {
     padding-left: 20px;
-    font-family: Montserrat;
     font-size: 20px;
     font-weight: 500;
 }
@@ -564,7 +574,7 @@ a:hover {
 
 .accord_content {
     color: #6a6a6a;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -578,7 +588,7 @@ a:hover {
     background-color: #0087be;
     border-radius: 22px;
     color: #ffffff;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato, sans-serif;
     font-size: 17px;
     font-weight: 700;
     text-transform: uppercase;
@@ -640,7 +650,6 @@ a:hover {
 }
 
 .gallery_header h3 {
-    font-family: Montserrat;
     font-size: 45px;
     font-weight: 700;
     margin-bottom: 35px;
@@ -648,7 +657,7 @@ a:hover {
 }
 
 .gallery_header p {
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -689,7 +698,6 @@ a:hover {
 
 .team_header h3 {
     color: #494949;
-    font-family: Montserrat;
     font-size: 45px;
     font-weight: 700;
     text-align: center;
@@ -698,7 +706,7 @@ a:hover {
 
 .team_header p {
     color: #6a6a6a;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 30px;
@@ -709,7 +717,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     color: #6f6f6e;
-    font-family: Montserrat;
     align-items: center;
 }
 
@@ -754,9 +761,17 @@ a:hover {
 
 .actionbar p {
     color: #494949;
-    font-family: Montserrat;
     font-size: 30px;
     font-weight: 700;
+}
+
+@media (max-width:1200px) {
+    .actionbar {
+        padding: 0 20px;
+    }
+    .actionbar p {
+        font-size: 25px;
+    }
 }
 
 .actionbar_btn {
@@ -825,7 +840,7 @@ a:hover {
 
 .footer_card h4 {
     margin-bottom: 65px;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 22px;
     font-weight: 700;
     line-height: 24px;
@@ -843,7 +858,7 @@ a:hover {
 
 .footer_card_item p {
     opacity: 0.51;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -859,7 +874,7 @@ a:hover {
 
 .footer_card li {
     opacity: 0.51;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -876,7 +891,7 @@ a:hover {
     width: 230px;
     height: 55px;
     opacity: 0.51;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -892,7 +907,7 @@ a:hover {
     width: 230px;
     height: 120px;
     opacity: 0.51;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -906,7 +921,7 @@ form button {
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
     background-color: #0087be;
     color: #ffffff;
-    font-family: Lato;
+    font-family: Lato, sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -922,7 +937,7 @@ form button:hover {
 .copyright {
     background-color: #1a1a1a;
     color: #615555;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 24px;
