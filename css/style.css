@@ -55,6 +55,9 @@ body {
     .header_bottom {
         padding-left: 30px;
     }
+    .header_menu {
+        margin-bottom: 15px;
+    }
 }
 
 .header_card {
@@ -150,10 +153,8 @@ a:hover {
 }
 .banner {    
     position: relative;
-    /* background-image: url(../img/layer_10_2248.jpg); */
     height: 640px;
     padding-top: 180px;
-    /* padding-left: calc((100% - 800px) * 250 / 800); */
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -174,11 +175,15 @@ a:hover {
     max-width: 524px;
     z-index: 10;
     margin-left: calc((100% - 800px) * 250 / 800);;
-    /* padding-left: calc((100% - 800px) * 250 / 800); */
+}
+
+@media (max-width: 800px) {
+    .banner_content {
+        margin-left: 10px;
+    }
 }
 
 .banner h1 {
-    /* height: 104px; */
     color: #474747;
     font-size: 48px;
     font-weight: 500;
@@ -188,7 +193,6 @@ a:hover {
 }
 
 .banner p {
-    /* height: 48px; */
     color: #3f3f3f;
     font-family: "OpenSans";
     font-size: 17px;
@@ -252,7 +256,6 @@ a:hover {
 .services_card {
     height: 360px;
     padding-top: 75px;
-    /* max-width: 400px; */
 }
 
 .services_card_image {
