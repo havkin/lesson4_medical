@@ -27,7 +27,6 @@ body {
 .header {
     padding-top: 30px;
     padding-bottom: 30px;
-    /* background-color: #fff; */
 }
 
 .header_top {
@@ -55,6 +54,7 @@ body {
     .header_bottom {
         padding-left: 30px;
     }
+
     .header_menu {
         margin-bottom: 15px;
     }
@@ -131,6 +131,15 @@ a {
 
 a:hover {
     color: #1a9bdc;
+
+}
+
+i {
+    transition-duration: 1s;
+}
+
+a:hover i {
+    transform: scale(1.2, 1.2);
 }
 
 .active {
@@ -151,7 +160,8 @@ a:hover {
 .banner_container {
     background-color: #cbd4e6;
 }
-.banner {    
+
+.banner {
     position: relative;
     height: 640px;
     padding-top: 180px;
@@ -174,7 +184,7 @@ a:hover {
     position: relative;
     max-width: 524px;
     z-index: 10;
-    margin-left: calc((100% - 800px) * 250 / 800);;
+    margin-left: calc((100% - 800px) * 250 / 800);
 }
 
 @media (max-width: 800px) {
@@ -215,12 +225,13 @@ a:hover {
     letter-spacing: 0.32px;
     display: block;
     margin: 0 auto;
+    cursor: pointer;
+    transition-duration: 1s;
 }
 
 .banner_btn:hover {
     background-color: blue;
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
-    cursor: pointer;
 }
 
 .banner_logo {
@@ -407,7 +418,7 @@ a:hover {
     min-height: 592px;
     background-color: #0087be;
     background-image: url(../img/Layer_9.png);
-    background-size: cover; 
+    background-size: cover;
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 325px));
     justify-content: center;
@@ -452,6 +463,34 @@ a:hover {
     letter-spacing: -1.52px;
     text-align: center;
     margin-top: 27px;
+}
+
+.bestfeature_card > img:hover {
+    animation: rocking;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rocking {
+    0% {
+        transform: rotateZ(-10deg);
+    }
+
+    25% {
+        transform: rotateZ(10deg);
+    }
+
+    50% {
+        transform: rotateZ(-10deg);
+    }
+
+    75% {
+        transform: rotateZ(10deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
 }
 
 /* textarea */
@@ -597,6 +636,8 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 0.32px;
     margin: 0 auto;
+    cursor: pointer;
+    transition-duration: 1s;
 }
 
 @media (max-width: 1300px) {
@@ -612,7 +653,7 @@ a:hover {
 }
 
 .readmore_btn:hover {
-    cursor: pointer;
+
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
     background-color: blue;
 }
@@ -630,6 +671,20 @@ a:hover {
     justify-content: center;
     grid-gap: 35px;
     padding-top: 94px;
+    animation: backgoundMoving;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes backgoundMoving {
+    0% {
+        background-position-x: 0px;
+    }
+
+    100% {
+        background-position-x: 1618px;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -721,13 +776,42 @@ a:hover {
     flex-direction: column;
     color: #6f6f6e;
     align-items: center;
+    perspective: 1000px;
 }
 
 .team_card_photo {
+    position: relative;
+    width: 279px;
+    height: 279px;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    transition: 1s linear;
+}
+
+.team_card_photo>img {
+    background-color: #e3e3e3;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+
+
+.team_card_photo>div {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 279px;
     height: 279px;
     background-color: #e3e3e3;
     border-radius: 50%;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
+    text-align: center;
+    padding-top: 100px;
+}
+
+.team_card_photo:hover {
+    transform: rotateY(180deg);
 }
 
 .team_card h4 {
@@ -772,6 +856,7 @@ a:hover {
     .actionbar {
         padding: 0 20px;
     }
+
     .actionbar p {
         font-size: 25px;
     }
@@ -791,10 +876,12 @@ a:hover {
     margin-left: 70px;
     flex-basis: 192px;
     flex-shrink: 0;
+    cursor: pointer;
+    transition-duration: 1s;
 }
 
 .actionbar_btn:hover {
-    cursor: pointer;
+
     box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
     background-color: blue;
 }
