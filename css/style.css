@@ -117,6 +117,7 @@ hr {
 @media (max-width: 600px) {
     .header_menu ul {
         flex-direction: column;
+        width: 300px;
     }
 
     .header_menu li {
@@ -377,7 +378,7 @@ a:hover i {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    width: 360px;
+    max-width: 360px;
     margin: 0 auto;
 }
 
@@ -401,7 +402,7 @@ a:hover i {
 }
 
 .whychoseus_card p {
-    width: 363px;
+    max-width: 363px;
     height: 74px;
     color: #6a6a6a;
     font-family: OpenSans, sans-serif;
@@ -527,11 +528,17 @@ a:hover i {
 
 @media (max-width: 900px) {
     .textarea {
-        grid-template-columns: 1fr;
+        grid-template-columns: 320px;
+        grid-template-rows: auto;
+        padding-right: 0px;
+        padding-left: 0px;
+        justify-content: center;
     }
-
     .shorttext:nth-of-type(2) {
         grid-row: 5/6;
+    }
+    .textarea_card > img {
+        width: 100%;
     }
 }
 
@@ -576,7 +583,7 @@ a:hover i {
 }
 
 .accord_btn {
-    width: 422px;
+    max-width: 422px;
     height: 54px;
     background-color: #e2e2e2;
     border-radius: 27px;
@@ -697,8 +704,11 @@ a:hover i {
 
 @media (max-width: 700px) {
     .gallery {
-        grid-template-columns: 344px;
+        grid-template-columns: 320px;
         grid-template-rows: auto repeat(6, 210px);
+    }
+    .gallery>img {
+        width: 100%;
     }
 }
 
@@ -839,7 +849,7 @@ a:hover i {
 /* ----------------------------------------------------------------------- */
 
 .actionbar {
-    height: 176px;
+    min-height: 176px;
     background-color: #e2e2e2;
     display: flex;
     justify-content: center;
@@ -850,6 +860,7 @@ a:hover i {
     color: #494949;
     font-size: 30px;
     font-weight: 700;
+    text-align: center;
 }
 
 @media (max-width:1200px) {
@@ -878,6 +889,17 @@ a:hover i {
     flex-shrink: 0;
     cursor: pointer;
     transition-duration: 1s;
+}
+
+@media (max-width: 600px) {
+    .actionbar {
+        flex-direction: column;
+    }
+    .actionbar_btn {
+        flex-basis: auto;
+        margin-top: 30px;
+        margin-left: 0;
+    }
 }
 
 .actionbar_btn:hover {
@@ -915,8 +937,9 @@ a:hover i {
     }
 
     .footer_card {
-        padding: 0 calc(25%);
-
+        padding: 0;
+        width: 300px;
+        margin: 0 auto;
     }
 
     .footer_card:last-of-type {
